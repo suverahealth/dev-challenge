@@ -17,7 +17,9 @@ For the database evaluation task, there are 3 questions are in the included [DB-
 Please fork the repository to begin the task. [Submission guidelines](#what-we-are-looking-for) are at the bottom of this page 😊
 
 ### 1] Code
-First, the code: After you have gotten familiar with the app, [technical details of the app are below](#main-app-functionality--file-structure), we would like for you to choose three tasks from the list of frontend and backend tasks below. Please choose at least 1 from each, including adding tests.
+First, the code: After you have gotten familiar with the app, [technical details of the app are below](#main-app-functionality--file-structure), we would like for you to choose **three** tasks from the list of frontend and backend tasks below. 
+
+**Please choose at least 1 from each to make up your minimum of 3, and you must write at least 1 test.**
 
 Frontend tasks:
 1. add a section to the homepage which allows the user to filter the results according to **ONE** category that a reader might want to filter news by (e.g. topic, source, date, or ??) 
@@ -42,7 +44,7 @@ Then, for the design section, you can choose between the following two:
 
 Frontend - analytics design: create a markdown file describing what **types of user behaviour** you would like to capture on this page for an analytical framework (e.g. [Heap](https://docs.heap.io/docs), [Amplitude](https://developers.amplitude.com/docs) or [Mixpanel](https://developer.mixpanel.com/docs)), and **why**.
 
-Backend - API design: create a markdown file describing what steps it takes for this API to become **ready for production usage** and **why**.
+Backend - API design: create a markdown file describing what steps it takes for this API to become **ready for production usage**, including any dependencies, and **why**.
 
 ### DB Task
 3] Finally, write include your answers to the **[Database Evaluation Task](DB-Task.md)** in your markdown file.
