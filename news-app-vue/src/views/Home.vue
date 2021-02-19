@@ -35,7 +35,7 @@ import axios from 'axios'
 import Article from '../components/Article'
 
 const stage = process.env.NODE_ENV
-axios.defaults.baseURL = `${process.env.VUE_APP_SERVICE_URL}${stage}`
+axios.defaults.baseURL = `${process.env.APP_SERVICE_URL}${stage}`
 axios.defaults.withCredentials = true
 axios.defaults.headers.common['Content-Type'] = 'application/json'
 
@@ -49,7 +49,7 @@ export default {
     contentType: 'top UK headlines'
   }),
   created() {
-    console.log(process.env[`VUE_APP_SERVICE_URL_${stage}`])
+    console.log(axios.defaults.baseURL)
     this.loadArticles('headlines', JSON.stringify({ country: 'gb' }))
   },
   methods: {

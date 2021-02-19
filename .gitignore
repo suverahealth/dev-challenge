@@ -1,3 +1,7 @@
+.DS_Store
+
+/dist/
+
 # Serverless directories
 .serverless
 .env
@@ -63,6 +67,17 @@ typings/
 
 # dotenv environment variables file
 .env
+.env.local
+.env.*.local
 
 # next.js build output
 .next
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw*
