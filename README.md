@@ -1,29 +1,38 @@
-# Product Engineer Front-End Challenge
+# Product Engineer Technical Challenge
 
 This challenge includes coding, an analytics design question, and a database evaluation task.
 
-Whilst we are looking for a front-end focused developer, as a small team we are realistically sharing the load on all applications. So the final task is meant to assess how you think about data-intensive systems - it does not use any specific database technology.
+Although as a small team we are realistically sharing the load on all applications, we recognise that everyone has their preferences and strengths across different parts of the stack. So this challenge is a holistic one where you will have options to highlight your strengths, as well as what you are still working on and learning. 
 
-For the coding & analytics design question, we have a basic News Reader: A pair of applications that serve up a front-end, written in [Vue.js](https://vuejs.org/), and a backend written in Node.js using the [Serverless Framework](https://serverless.com/). They allow a reader to see the latest UK news and search for articles by keywords.
+For the coding & analytics design question, we have a basic News Reader: A set of applications that serve up a front-end, you can choose from two written in [Vue.js](https://vuejs.org/) and [React.js](https://reactjs.org/), and a backend written in Node.js using the [Serverless Framework](https://serverless.com/). They allow a reader to see the latest UK news and search for articles by keywords.
 
-For the database evaluation task, there are 3 questions are in the included [DB-Task.md](DB-Task.md) file, and they are centred on an event registration system.
+For the database evaluation task, there are 3 questions are in the included [DB-Task.md](DB-Task.md) file, and they are centred on an event registration system. The final task is meant to assess how you think about data-intensive systems - it does not use any specific database technology.
 
-**Please email us the link to your repository when it's ready to review, at least 48h before your interview. Thank you, and good luck! 🎉**
+**Please email us the link to your repository when it's ready to review, at least 24h before your interview. Thank you, and good luck! 🎉**
 
 ##  What is the Challenge?
 
 Please fork the repository to begin the task. [Submission guidelines](#what-we-are-looking-for) are at the bottom of this page 😊
 
-1] First, the code: After you have gotten familiar with the app, [technical details of the app are below](#main-app-functionality--file-structure), we would like for you to:
+1] First, the code: After you have gotten familiar with the app, [technical details of the app are below](#main-app-functionality--file-structure), we would like for you to choose three tasks from the list of frontend and backend tasks below. Please choose at least 1 from each, including adding tests.
+
+Frontend tasks:
 1. add a section to the homepage which allows the user to filter the results according to **ONE** category that a reader might want to filter news by (e.g. topic, source, date, or ??) 
 2. add at least 1 or 2 tests to the front-end web app
 3. implement web accessibility on components
-4. *(optional tasks)* If you find that you have time and would like to make the front-end app even nicer, you could tackle one of the following tasks:
+
+Backend tasks:
+1. make a performance impro
+2. make a performance improvement to the API as a whole
+3. add at least 1 or 2 tests to the backend
+
+*optional extra tasks:* 
+If you find that you have time and would like to make the front-end app even nicer, you could tackle one of the following tasks:
    - improve the functionality & design of the Article component (`src/components/Article.vue`) so that it is more intuitive to a reader
    - improve the overall design of the homepage
    - make the website SEO friendly
    
-**If you prefer, you are welcome to use your own/preferred front-end framework (e.g. React)**, to ping our included backend service. You are also welcome to **make any changes to the codebase that you would like to, as long as it is still functional.** Please remember that this is meant to take up to **3 hours in total**, and is merely an exercise, so we are not expecting the entire moon, just holistic improvements! 😬 😅
+**Whilst we have provided both Vue and React versions, If you prefer, you are welcome to use your own/preferred front-end framework**, to ping the backend service. You are also welcome to **make any changes to the codebase that you would like to, as long as it is still functional.** Please remember that this is meant to take up to **3 hours in total**, and is merely an exercise, so we are not expecting the entire moon, just holistic improvements! 😬 😅
 
 2] Then, analytics design: create a markdown file describing what **types of user behaviour** you would like to capture on this page for an analytical framework (e.g. [Heap](https://docs.heap.io/docs), [Amplitude](https://developers.amplitude.com/docs) or [Mixpanel](https://developer.mixpanel.com/docs)), and **why**.
 
@@ -43,15 +52,14 @@ For other OSes, the installation tools are in the links for `nvm` and `yarn` abo
    3. set up your API key in the `.env` file `NEWS_API_KEY={{ your api key }}`
    4. `yarn install`
    5. Run `sls offline start --stage dev`
-2. To run the front-end app - written in VueJS:
-   1. `cd news-app`
-   2. In `news-app` - `.env`:
+2. To run the front-end app:
+   1. `cd news-app-vue` or `cd news-app-react`
+   2. In your `news-app` frontend - `.env`:
         ```
         NODE_ENV=dev
-        VUE_APP_SERVICE_URL=http://localhost:3000/
-        VUE_APP_SERVICE_KEY={{ TBA API key for serverless when closer to deploy }}
+        APP_SERVICE_URL=http://localhost:3000/
         ```
-   3. `yarn install`
+   3. for the Vue app: `yarn install`, for the React app: `npm install`
    4. Run `yarn serve`
 
 Once you are able to run the app following the steps [above](#quickstart-dev), it'll render the view on `http://localhost:8080/` like this: ![news-app](news-app.png)
@@ -87,3 +95,8 @@ These are the guidelines on what we are looking for in our submissions:
 - As a news reader, it is clear how I should can use the page to find news that I am looking for
 - If technologies used are changed (e.g. using React instead of Vue), a set of instructions on how to run the app are updated in the README.
 - Any changes to file structure are also communicated in the README
+- Good use of version control (git) + github to communicate your improvements
+
+#### Credits
+Vue + Serverless base: [parisandmilo](https://github.com/parisandmilo)
+React base: [AkwasiSB](https://github.com/AkwasiSB) 
