@@ -35,7 +35,7 @@ Testing tasks:
 
 *optional extra tasks:* 
 If you find that you have time and would like to make the app even nicer, you could tackle one of the following tasks:
-   - (front-end) improve the functionality & design of the Article component (`src/components/Article(.vue|.js)`) so that it is more intuitive to a reader
+   - (front-end) improve the functionality & design of the Article component (`src/components/Article.(vue|js)`) so that it is more intuitive to a reader
    - (front-end) improve the overall design of the homepage
    - (front-end) make the website SEO friendly
    - (backend) improve error handling
@@ -100,7 +100,8 @@ Your backend service will be running on `http://localhost:3000/` should look lik
 
 ###  Main App Functionality & File Structure
 
-The key dependencies used are the [`news-api` module](https://www.npmjs.com/package/newsapi) which allows us to fetch news from [NewsAPI.org](https://newsapi.org/) on our backend, for the vue app [`axios`](https://www.npmjs.com/package/axios) & [Vuetify](https://vuetifyjs.com/en/) or for the react app [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) & [styled-components](https://styled-components.com/) are used on the front-end for fetching data and components respectively.
+The key dependencies used are the [`news-api` module](https://www.npmjs.com/package/newsapi) which allows us to fetch news from [NewsAPI.org](https://newsapi.org/) on our backend.<br>
+For the vue app, [`axios`](https://www.npmjs.com/package/axios) & [Vuetify](https://vuetifyjs.com/en/) or for the react app [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) & [styled-components](https://styled-components.com/) are used on the front-end for fetching data and components respectively.
 
 The main backend endpoint is the `/articles` endpoint, which can return the [top headlines](https://newsapi.org/docs/endpoints/top-headlines) or results based on a query of ["everything"](https://newsapi.org/docs/endpoints/everything). It is a POST request that takes the type (`headlines` or `search`), along with the query body (uses `country` for headlines, and `q` for the search).
 
