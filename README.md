@@ -53,8 +53,8 @@ Frontend - analytics design: create a markdown file describing what **types of u
 
 Backend - API design: create a markdown file describing what steps it takes for this API to become **ready for production usage**, including any dependencies, and **why**.
 
-### DB Task
-3] Finally, write your answers to the **[Database Evaluation Task](DB-Task.md)** in your markdown file.
+### 3] DB Task
+Finally, write your answers to the **[Database Evaluation Task](DB-Task.md)** in your markdown file.
 
 ## What we are looking for
 
