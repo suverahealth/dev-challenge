@@ -47,7 +47,7 @@ If you find that you have time and would like to make the app even nicer, you co
 Please remember that this is merely a way for us to see how you approach problems and work on shared code, so we are not expecting the entire moon, just holistic improvements! 😬😅😊
 
 ### 2] Design
-Then, for the design section, you can choose between the following two:
+Then, for the design section, you can **choose one** between the following two:
 
 Frontend - analytics design: create a markdown file describing what **types of user behaviour** you would like to capture on this page for an analytical framework (e.g. [Heap](https://docs.heap.io/docs), [Amplitude](https://developers.amplitude.com/docs) or [Mixpanel](https://developer.mixpanel.com/docs)), and **why**.
 
@@ -61,6 +61,8 @@ Finally, write your answers to the **[Database Evaluation Task](DB-Task.md)** in
 These are the guidelines on what we are looking for in our submissions:
 - Code is human-readable and easy to understand
 - Code patterns correspond to expected user-facing functionality
+- Clear and holistic, systematic approach to problem-solving
+- Clear demonstration of your solid foundational rooting in technical concepts behind scalable, reliable, privacy-preserving and accessible user-centric web-based applications & architectures
 - The accompanying file of markdown answers is well-structured and communicates your thoughts clearly and concisely
 - Any tests that are written make sense according to how a user might behave on the page
 - The styling of code is consistent and technical choices are well-commnunicated
