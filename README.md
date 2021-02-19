@@ -19,7 +19,7 @@ Please fork the repository to begin the task. [Submission guidelines](#what-we-a
 ### 1] Code
 First, the code: After you have gotten familiar with the app, [technical details of the app are below](#main-app-functionality--file-structure), we would like for you to choose **three** tasks from the list of frontend and backend tasks below. 
 
-**Please choose at least 1 from each of the following categories to make up your minimum of three. You must choose at least one frontend and one backend task.**
+**Please choose from each of the following categories to make up your minimum of three. You must choose at least one frontend and one backend task! 😉**
 
 Functionality tasks:
 1. *Frontend*: add a section to the homepage which allows the user to filter the results according to **ONE** category that a reader might want to filter news by (e.g. topic, source, date, or ??) 
