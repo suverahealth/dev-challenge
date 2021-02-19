@@ -5,7 +5,7 @@
         <h1>About this app</h1>
         <v-btn
           flat
-          src="https://github.com/suverahealth/news-api"
+          src="https://github.com/suverahealth/dev-challenge"
           target="_blank"
           >Repo</v-btn
         >
