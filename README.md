@@ -30,8 +30,8 @@ Quality tasks:
 2. *Backend*: make a performance improvement to the API as a whole
    
 Testing tasks:
-1. Add end-to-end testing on the frontend (e.g. using [Cypress](https://www.cypress.io/)), including at least 1 or 2 user-behaviour-driven tests
-2. Add unit testing on the backend (e.g. using [Jest](https://www.serverless.com/blog/unit-testing-nodejs-serverless-jest/) or [tape](https://www.npmjs.com/package/tape)), including at least 1 or 2 user-behaviour-driven tests
+1. *Frontend*: Add end-to-end testing on the frontend (e.g. using [Cypress](https://www.cypress.io/)), including at least 1 or 2 user-behaviour-driven tests
+2. *Backend*: Add unit testing on the backend (e.g. using [Jest](https://www.serverless.com/blog/unit-testing-nodejs-serverless-jest/) or [tape](https://www.npmjs.com/package/tape)), including at least 1 or 2 user-behaviour-driven tests
 
 *optional extra tasks:* 
 If you find that you have time and would like to make the app even nicer, you could tackle one of the following tasks:
@@ -42,16 +42,18 @@ If you find that you have time and would like to make the app even nicer, you co
    - (backend) add the minimum required documentation a front-end developer interfacing with this backend might like to see
    - (backend) write a load test for one of the endpoints (e.g. using [Artillery](https://artillery.io/docs/guides/overview/welcome.html))
    
-**Whilst we have provided both Vue and React versions, If you prefer, you are welcome to use your own/preferred front-end framework**, to ping the backend service. You are also welcome to **make any changes to the codebase that you would like to, as long as it is still functional.** Please remember that this is meant to take up to **3 hours in total**, and is merely an exercise, so we are not expecting the entire moon, just holistic improvements! 😬 😅
+**Whilst we have provided both Vue and React versions, If you prefer, you are welcome to use your own/preferred front-end framework**, to ping the backend service. You are also welcome to **make any changes to the codebase that you would like to, as long as it is still functional.** 
 
-### 2] Design
+Please remember that this is merely a way for us to see how you approach problems and work on shared code, so we are not expecting the entire moon, just holistic improvements! 😬😅😊
+
+### 2] Design
 Then, for the design section, you can choose between the following two:
 
 Frontend - analytics design: create a markdown file describing what **types of user behaviour** you would like to capture on this page for an analytical framework (e.g. [Heap](https://docs.heap.io/docs), [Amplitude](https://developers.amplitude.com/docs) or [Mixpanel](https://developer.mixpanel.com/docs)), and **why**.
 
 Backend - API design: create a markdown file describing what steps it takes for this API to become **ready for production usage**, including any dependencies, and **why**.
 
-### DB Task
+### DB Task
 3] Finally, write your answers to the **[Database Evaluation Task](DB-Task.md)** in your markdown file.
 
 ## What we are looking for
