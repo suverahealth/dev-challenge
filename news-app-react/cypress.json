@@ -1,0 +1,10 @@
+{
+  "pluginsFile": "tests/e2e/plugins",
+  "baseUrl": "http://localhost:4000",
+  "fixturesFolder": "tests/e2e/fixtures",
+  "integrationFolder": "tests/e2e/specs",
+  "supportFile": "tests/e2e/support/index.js",
+  "experimentalFetchPolyfill": true,
+  "viewportWidth": 1000,
+  "viewportHeight": 928
+}
