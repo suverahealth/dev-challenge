@@ -4,7 +4,9 @@ This challenge includes coding, a design question, and a database evaluation tas
 
 Although as a small team we are realistically sharing the load on all applications, we recognise that everyone has their preferences and strengths across different parts of the stack. So this challenge is a holistic one where you will have options to highlight your strengths, as well as what you are still working on and learning. 
 
-For the coding & design question, we have a basic News Reader: A set of applications that serve up a front-end, you can choose from two written in [Vue.js](https://vuejs.org/) and [React.js](https://reactjs.org/), and a backend written in Node.js using the [Serverless Framework](https://serverless.com/). They allow a reader to see the latest UK news and search for articles by keywords.
+For the coding question, we have a basic News Reader: A set of applications that serve up a front-end, you can choose from two written in [Vue.js](https://vuejs.org/) and [React.js](https://reactjs.org/), and a backend written in Node.js using the [Serverless Framework](https://serverless.com/). They allow a reader to see the latest UK news and search for articles by keywords.
+
+For the design challenge, you are able to **choose one** from the two tasks, either Analytics and API.
 
 For the database evaluation task, there are 3 questions are in the included [DB-Task.md](DB-Task.md) file, and they are centred on an event registration system. The final task is meant to assess how you think about data-intensive systems - it does not use any specific database technology.
 
