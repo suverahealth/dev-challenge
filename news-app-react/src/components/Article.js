@@ -18,8 +18,7 @@ function Article({ article }) {
       <Card>
         <ImageWrapper>
           <Image
-            src={urlToImage || null}
-            alt='article image' />
+            src={urlToImage || null} />
         </ImageWrapper>
 
         <Content aria-label='article content'>

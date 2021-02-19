@@ -4,83 +4,10 @@ import styled from 'styled-components';
 import SearchIcon from '@material-ui/icons/Search';
 
 import Spinner from 'components/Spinner';
-import Button from 'components/Button';
 import Article from 'components/Article';
 
 const stage = process.env.NODE_ENV;
 const baseURL = `${process.env.APP_SERVICE_URL}${stage}`;
-
-let newsFiltersGroup = [{
-  type: 'category',
-  name: 'Business',
-  isActive: false
-},
-{
-  type: 'category',
-  name: 'Entertainment',
-  isActive: false
-},
-{
-  type: 'category',
-  name: 'Science',
-  isActive: false
-},
-{
-  type: 'category',
-  name: 'Health',
-  isActive: false
-},
-{
-  type: 'category',
-  name: 'Sports',
-  isActive: false
-},
-{
-  type: 'category',
-  name: 'Technology',
-  isActive: false
-},
-{
-  type: 'sources',
-  name: 'BBC News',
-  isActive: false
-},
-{
-  type: 'sources',
-  name: 'Business Insider UK',
-  isActive: false
-}];
-
-function refreshNewsFiltersGroup(activeFilter) {
-  newsFiltersGroup = newsFiltersGroup.map((value) => {
-    if (value.name === activeFilter?.name) {
-      return {
-        ...value,
-        isActive: !activeFilter.isActive
-      }
-    }
-
-    return {
-      ...value,
-      isActive: false
-    };
-  });
-}
-
-function loadNewsFilter(filter, setNewsFilter, setSearchText) {
-  return function() {
-    setSearchText('');
-
-    const newsFilter = filter.isActive === true ? null : {
-      ...filter,
-      isActive: true
-    };
-
-    setNewsFilter(newsFilter);
-
-    refreshNewsFiltersGroup(filter);
-  }
-}
 
 function loadSearchInput(setSearchText) {
   return function(e) {
@@ -145,7 +72,6 @@ function Home() {
 
   const [contentTitle, setContentTitle] = useState(defaultContentTitle);
   const [searchText, setSearchText] = useState('');
-  const [newsFilter, setNewsFilter] = useState(null);
   const [articles, setArticles] = useState({
     isLoading: true,
     data: [],
@@ -154,9 +80,6 @@ function Home() {
 
   useEffect(() => {
     if(searchText.length > 0) {
-      setNewsFilter(null);
-
-      refreshNewsFiltersGroup(newsFilter);
 
       setContentTitle(`${searchContentTitle} ${searchText}`);
 
@@ -169,37 +92,12 @@ function Home() {
 
       let bodyParam = { country: 'gb' };
 
-      if (newsFilter?.isActive === true) {
-        const { type, name } = newsFilter;
-
-        if (type === 'sources') {
-          delete bodyParam.country;
-        }
-
-        bodyParam[type] = name.toLowerCase().replace(/\s/g, '-');
-      }
-
       loadArticles('headlines', bodyParam, setArticles);
     }
-  }, [searchText, newsFilter]);
+  }, [searchText]);
 
   return (
     <HomePage>
-      <NewsFilters
-        role='group'
-        aria-label='news filters'>
-        {newsFiltersGroup.map((value, index) => (
-          <BubbleButton
-            as='button'
-            key={index}
-            data-active={value?.isActive === true}
-            data-testid={`filterby-${value.name.toLowerCase().replace(/\s/g, '-')}`}
-            onClick={loadNewsFilter(value, setNewsFilter, setSearchText)}>
-            {value.name}
-          </BubbleButton>
-        ))}
-      </NewsFilters>
-
       <PageTitle data-testid='search-title'>
         Showing you the {contentTitle}
       </PageTitle>
@@ -253,28 +151,6 @@ const HomePage = styled.section`
 
   @media (max-width: 486px) {
     padding: 10px;
-  }
-`;
-
-const NewsFilters = styled.section`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 10px 0;
-  width: 100%;
-`;
-
-const BubbleButton = styled(Button)`
-  padding: 2px 12px;
-  margin: 8px;
-  border-radius: 12px;
-  background-color: #dcdcdc;
-  cursor: pointer;
-  text-transform: capitalize;
-
-  &[data-active='true'] {
-    background-color: #ee44aa;
-    color: #fff;
   }
 `;
 

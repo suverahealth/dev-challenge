@@ -11,7 +11,7 @@ function About() {
       </h1>
 
       <AboutButton
-        href='https://github.com/AkwasiSB/frontend-challenge'
+        href='https://github.com/suverahealth/dev-challenge'
         rel='noreferrer'
         data-testid='about-button'>
         Repo
