@@ -1,10 +1,10 @@
 # Product Engineer Technical Challenge
 
-This challenge includes coding, an analytics design question, and a database evaluation task.
+This challenge includes coding, a design question, and a database evaluation task.
 
 Although as a small team we are realistically sharing the load on all applications, we recognise that everyone has their preferences and strengths across different parts of the stack. So this challenge is a holistic one where you will have options to highlight your strengths, as well as what you are still working on and learning. 
 
-For the coding & analytics design question, we have a basic News Reader: A set of applications that serve up a front-end, you can choose from two written in [Vue.js](https://vuejs.org/) and [React.js](https://reactjs.org/), and a backend written in Node.js using the [Serverless Framework](https://serverless.com/). They allow a reader to see the latest UK news and search for articles by keywords.
+For the coding & design question, we have a basic News Reader: A set of applications that serve up a front-end, you can choose from two written in [Vue.js](https://vuejs.org/) and [React.js](https://reactjs.org/), and a backend written in Node.js using the [Serverless Framework](https://serverless.com/). They allow a reader to see the latest UK news and search for articles by keywords.
 
 For the database evaluation task, there are 3 questions are in the included [DB-Task.md](DB-Task.md) file, and they are centred on an event registration system. The final task is meant to assess how you think about data-intensive systems - it does not use any specific database technology.
 
@@ -14,7 +14,8 @@ For the database evaluation task, there are 3 questions are in the included [DB-
 
 Please fork the repository to begin the task. [Submission guidelines](#what-we-are-looking-for) are at the bottom of this page 😊
 
-1] First, the code: After you have gotten familiar with the app, [technical details of the app are below](#main-app-functionality--file-structure), we would like for you to choose three tasks from the list of frontend and backend tasks below. Please choose at least 1 from each, including adding tests.
+### 1] Code
+First, the code: After you have gotten familiar with the app, [technical details of the app are below](#main-app-functionality--file-structure), we would like for you to choose three tasks from the list of frontend and backend tasks below. Please choose at least 1 from each, including adding tests.
 
 Frontend tasks:
 1. add a section to the homepage which allows the user to filter the results according to **ONE** category that a reader might want to filter news by (e.g. topic, source, date, or ??) 
@@ -22,7 +23,7 @@ Frontend tasks:
 3. implement web accessibility on components
 
 Backend tasks:
-1. make a performance impro
+1. add an endpoint that will allow users to filter their top headlines by source
 2. make a performance improvement to the API as a whole
 3. add at least 1 or 2 tests to the backend
 
@@ -34,8 +35,14 @@ If you find that you have time and would like to make the front-end app even nic
    
 **Whilst we have provided both Vue and React versions, If you prefer, you are welcome to use your own/preferred front-end framework**, to ping the backend service. You are also welcome to **make any changes to the codebase that you would like to, as long as it is still functional.** Please remember that this is meant to take up to **3 hours in total**, and is merely an exercise, so we are not expecting the entire moon, just holistic improvements! 😬 😅
 
-2] Then, analytics design: create a markdown file describing what **types of user behaviour** you would like to capture on this page for an analytical framework (e.g. [Heap](https://docs.heap.io/docs), [Amplitude](https://developers.amplitude.com/docs) or [Mixpanel](https://developer.mixpanel.com/docs)), and **why**.
+### 2] Design
+Then, for the design section, you can choose between the following two:
 
+Frontend - analytics design: create a markdown file describing what **types of user behaviour** you would like to capture on this page for an analytical framework (e.g. [Heap](https://docs.heap.io/docs), [Amplitude](https://developers.amplitude.com/docs) or [Mixpanel](https://developer.mixpanel.com/docs)), and **why**.
+
+Backend - API design: create a markdown file describing what steps it takes for this API to become **ready for production usage** and **why**.
+
+### DB Task
 3] Finally, write include your answers to the **[Database Evaluation Task](DB-Task.md)** in your markdown file.
 
 ## Quickstart dev

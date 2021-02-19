@@ -10,6 +10,7 @@ provider:
   stage: ${opt:stage} # set the stage based on what Circle Branch is deploying
   region: eu-west-2 # default is us-east-1
   cfLogs: true
+  useDotenv: true
   # apiKeys:
   #   - news_api
 
