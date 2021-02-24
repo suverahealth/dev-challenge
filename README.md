@@ -19,7 +19,9 @@ Please fork the repository to begin the task. [Submission guidelines](#what-we-a
 ### 1] Code
 First, the code: After you have gotten familiar with the app, [technical details of the app are below](#main-app-functionality--file-structure), we would like for you to choose **three** tasks from the list of frontend and backend tasks below. 
 
-**Please choose at least 1 from each of the following categories to make up your minimum of three.**
+**Please choose at least one task from each of the following categories to make up your minimum of three.**
+
+**You must choose at least one frontend and one backend task! 😉**
 
 Functionality tasks:
 1. *Frontend*: add a section to the homepage which allows the user to filter the results according to **ONE** category that a reader might want to filter news by (e.g. topic, source, date, or ??) 
@@ -35,7 +37,7 @@ Testing tasks:
 
 *optional extra tasks:* 
 If you find that you have time and would like to make the app even nicer, you could tackle one of the following tasks:
-   - (front-end) improve the functionality & design of the Article component (`src/components/Article.vue`) so that it is more intuitive to a reader
+   - (front-end) improve the functionality & design of the Article component (`src/components/Article.(vue|js)`) so that it is more intuitive to a reader
    - (front-end) improve the overall design of the homepage
    - (front-end) make the website SEO friendly
    - (backend) improve error handling
@@ -92,7 +94,7 @@ For other OSes, the installation tools are in the links for `nvm` and `yarn` abo
         APP_SERVICE_URL=http://localhost:3000/
         ```
    3. for the Vue app: `yarn install`, for the React app: `npm install`
-   4. Run `yarn serve`
+   4. Run `yarn serve` for the Vue app, or `npm start` for the React app
 
 Once you are able to run the app following the steps [above](#quickstart-dev), it'll render the view on `http://localhost:8080/` like this: ![news-app](news-app.png)
 Your backend service will be running on `http://localhost:3000/` should look like this:
@@ -100,13 +102,20 @@ Your backend service will be running on `http://localhost:3000/` should look lik
 
 ###  Main App Functionality & File Structure
 
-The key dependencies used are the [`news-api` module](https://www.npmjs.com/package/newsapi) which allows us to fetch news from [NewsAPI.org](https://newsapi.org/) on our backend, [`axios`](https://www.npmjs.com/package/axios) & [Vuetify](https://vuetifyjs.com/en/) on front-end for fetching data and components respectively.
+The key dependencies used are the [`news-api` module](https://www.npmjs.com/package/newsapi) which allows us to fetch news from [NewsAPI.org](https://newsapi.org/) on our backend.<br>
+For the vue app, [`axios`](https://www.npmjs.com/package/axios) & [Vuetify](https://vuetifyjs.com/en/) or for the react app [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) & [styled-components](https://styled-components.com/) are used on the front-end for fetching data and components respectively.
 
 The main backend endpoint is the `/articles` endpoint, which can return the [top headlines](https://newsapi.org/docs/endpoints/top-headlines) or results based on a query of ["everything"](https://newsapi.org/docs/endpoints/everything). It is a POST request that takes the type (`headlines` or `search`), along with the query body (uses `country` for headlines, and `q` for the search).
 
 The front-end pings the endpoint, loads the data accordingly and renders it for the reader on the homepage.
 
-In `news-app` front-end: `App.vue` renders different views (in `src/views`) through the router, and pulls in data from the backend endpoint to load each into its own article component (`src/components/Article.vue`). The main view is `src/views/Home.vue`
+In `news-app` front-end: `App.(vue|js)` renders different screens (in `src/views`) through the router, and pulls in data from the backend endpoint to load each into its own article component (`src/components/Article.(vue|js)`). The main view is the `src/views/Home.(vue|js)`.
+
+**src folder structure**
+```
+components -> for reusable components
+views      -> for various screens of the app
+```
 
 In `news-service` backend: 
 - `serverless.yml` defines how the endpoints will be declared for the provider, as well as doing some basic request validation / handling. Written in the context of an AWS Lambda service, as that can be easily deployed, basically free and is still scalable
