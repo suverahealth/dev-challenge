@@ -94,7 +94,7 @@ For other OSes, the installation tools are in the links for `nvm` and `yarn` abo
         APP_SERVICE_URL=http://localhost:3000/
         ```
    3. for the Vue app: `yarn install`, for the React app: `npm install`
-   4. Run `yarn serve`
+   4. Run `yarn serve` for the Vue app, or `npm start` for the React app
 
 Once you are able to run the app following the steps [above](#quickstart-dev), it'll render the view on `http://localhost:8080/` like this: ![news-app](news-app.png)
 Your backend service will be running on `http://localhost:3000/` should look like this:
