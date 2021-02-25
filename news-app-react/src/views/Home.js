@@ -3,7 +3,6 @@ import debounce from 'debounce';
 import styled from 'styled-components';
 import SearchIcon from '@material-ui/icons/Search';
 
-import Spinner from 'components/Spinner';
 import Article from 'components/Article';
 
 const stage = process.env.NODE_ENV;
@@ -98,46 +97,28 @@ function Home() {
 
   return (
     <HomePage>
-      <PageTitle data-testid='search-title'>
+      <PageTitle>
         Showing you the {contentTitle}
       </PageTitle>
 
-      <InputGroup
-        role='search'
-        aria-label='for news articles'>
+      <InputGroup>
         <SearchInput
           ref={searchInputRef}
           name='search-input'
           type='text'
           placeholder={inputLabel}
           defaultValue={searchText}
-          aria-label={inputLabel}
-          data-testid='search-input'
           onChange={loadSearchInput(setSearchText)} />
 
         <SearchIcon />
       </InputGroup>
 
-      {articles.isLoading === true &&
-        <ArticleSpinner label='Loading articles' />}
-
       {articles.data?.length > 0 &&
-        <ArticleList data-testid='article-list'>
+        <ArticleList>
           {articles.data?.map((article, index) => (
             <Article key={index} article={article} />
           ))}
         </ArticleList>}
-
-      {articles.onError === true &&
-        <PageMessage>
-          Network error, try again later :(
-        </PageMessage>}
-
-      {articles.onError === false && articles.data?.length === 0 &&
-        articles.isLoading === false &&
-          <PageMessage>
-            Sorry, no news articles are available at moment :(
-          </PageMessage>}
     </HomePage>
   );
 }
@@ -215,24 +196,11 @@ const SearchInput = styled.input`
   }
 `;
 
-const PageMessage = styled.h2`
-  margin: auto;
-  margin-top: 15%;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 1.2;
-  text-align: center;
-`;
-
 const ArticleList = styled.ul`
   display: flex;
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
-`;
-
-const ArticleSpinner = styled(Spinner)`
-  margin-top: 15%;
 `;
 
 export default Home;

@@ -13,6 +13,10 @@ module.exports = {
     "\\.(css|scss)$": "identity-obj-proxy"
   },
   modulePaths: ["<rootDir>/"],
+  testPathIgnorePatterns: [
+    'tests/e2e/',
+    'node_modules/',
+  ],
   setupFiles: ["<rootDir>setupTests.js"],
   verbose: true
 };
