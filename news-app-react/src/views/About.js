@@ -6,14 +6,13 @@ import Button from 'components/Button';
 function About() {
   return (
     <AboutPage>
-      <h1 data-testid='about-title'>
+      <h1>
         About this app
       </h1>
 
       <AboutButton
         href='https://github.com/suverahealth/dev-challenge'
-        rel='noreferrer'
-        data-testid='about-button'>
+        rel='noreferrer'>
         Repo
       </AboutButton>
     </AboutPage>

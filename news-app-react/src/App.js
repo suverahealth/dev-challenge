@@ -1,12 +1,10 @@
-import React, { lazy, Suspense } from 'react';
+import React from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
+import Home from 'views/Home';
+import About from 'views/About';
 import Navbar from 'components/Navbar';
-import Spinner from 'components/Spinner';
-
-const Home = lazy(() => import('views/Home'));
-const About = lazy(() => import('views/About'));
 
 function App() {
   return (
@@ -17,13 +15,11 @@ function App() {
         <Navbar />
 
         <MainView>
-          <Suspense fallback={<Spinner label='Loading page' />}>
-            <Switch>
-              <Route exact={true} path='/' component={Home} />
+          <Switch>
+            <Route exact={true} path='/' component={Home} />
 
-              <Route path='/about' component={About} />
-            </Switch>
-          </Suspense>
+            <Route path='/about' component={About} />
+          </Switch>
         </MainView>
       </AppContainer>
     </Router>

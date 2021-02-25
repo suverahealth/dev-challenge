@@ -10,15 +10,13 @@ function Navbar() {
       <AppNavLink
         as={NavLink}
         exact={true}
-        to='/'
-        data-testid='news-api-navlink'>
+        to='/'>
         News Api
       </AppNavLink>
 
       <AppNavLink
         as={NavLink}
-        to='/about'
-        data-testid='about-navlink'>
+        to='/about'>
         About
       </AppNavLink>
     </AppNav>

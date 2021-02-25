@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
@@ -12,21 +12,19 @@ function Article({ article }) {
   }
 
   return (
-    <CardBox
-      aria-label='news article'
-      data-testid='article-item'>
+    <CardBox>
       <Card>
         <ImageWrapper>
           <Image
             src={urlToImage || null} />
         </ImageWrapper>
 
-        <Content aria-label='article content'>
-          <h1 data-testid='article-item-title'>
+        <Content>
+          <h1>
             {title}
           </h1>
 
-          <p data-testid='article-item-info'>
+          <p>
             {source.name} | 
             {author || 'author not listed'} | 
             {new Date(publishedAt).toDateString()}
@@ -40,8 +38,7 @@ function Article({ article }) {
             <CardButton
               href={url}
               target='_blank'
-              rel='noreferrer'
-              aria-label='Click to read more'>
+              rel='noreferrer'>
               Read
             </CardButton>
           </ActionArea>
@@ -155,4 +152,4 @@ const CardButton = styled(Button)`
   margin-left: 16px;
 `;
 
-export default memo(Article);
+export default Article;
